@@ -1,0 +1,7 @@
+esNode:
+    image: esdemo:1.1.0
+esGateway:
+    image: esdemo:1.1.0
+    ports:
+     - "9200:9200"
+     - "9300:9300"
