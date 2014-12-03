@@ -25,7 +25,7 @@ This is easy:
 
  This starts up our services (`up`) in the background (`-d` for "detached").
 
- Next, run `fig logs` to watch the nodes come up. Once they're up, you can view the cluster state via [http://localhost:9200/_plugin/kopf](the kopf plugin).
+ Next, run `fig logs` to watch the nodes come up. Once they're up, you can view the cluster state via [the kopf plugin](http://localhost:9200/_plugin/kopf).
 
 ## Creating an populating the index
 
