@@ -1,7 +1,11 @@
 esNode:
     image: esdemo:1.1.0
+    environment:
+      - NETWORK_PUBLISH_HOST
 esGateway:
     image: esdemo:1.1.0
+    environment:
+      - NETWORK_PUBLISH_HOST
     ports:
      - "9200:9200"
      - "9300:9300"
