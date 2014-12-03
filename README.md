@@ -27,28 +27,28 @@ This is easy:
 
  Next, run `fig logs` to watch the nodes come up. Once they're up, you can view the cluster state via [http://localhost:9200/_plugin/kopf](the kopf plugin).
 
- ## Creating an populating the index
+## Creating an populating the index
 
- There are a few scripts in this repo that encapsulate some HTTP requests to the Elasticseach REST API for creating and populating an index.
- Simply run:
+There are a few scripts in this repo that encapsulate some HTTP requests to the Elasticseach REST API for creating and populating an index.
+Simply run:
 
      ./createIndex.sh 
      ./loadIndex.sh
 
- Then watch the kopf plugin to see the data being loaded.
+Then watch the kopf plugin to see the data being loaded.
 
- ## Adding and removing nodes
+## Adding and removing nodes
 
- Adding nodes is simple. You have an N+1 node cluster, where N is the number of `esNode` services you have running. The '1' node is the esGateway service that has its container ports mapped to your host's ports.
+Adding nodes is simple. You have an N+1 node cluster, where N is the number of `esNode` services you have running. The '1' node is the esGateway service that has its container ports mapped to your host's ports.
 
- So, to go to an 8 node cluster, you would run
+So, to go to an 8 node cluster, you would run
 
-     fig scale esNode=7
+    fig scale esNode=7
 
- If you watch the kopf plugin, you can see the shards being moved about the cluster
+If you watch the kopf plugin, you can see the shards being moved about the cluster
 
 
- ## Rerouting shard
+## Rerouting shard
 
  If you want to move an unallocated shard into the cluster, simply run
 
