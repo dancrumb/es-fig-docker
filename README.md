@@ -9,6 +9,14 @@ First, you'll need to install Docker on your system. There are [instructions](ht
 
 Next, you'll need to install Fig. [Instructions](http://www.fig.sh/install.html) on their site indicate that support for OS X an 64-bit Linux come out of the box. If you're on another system, you'll need to install it as a Python package.
 
+## Building the docker image
+
+Run this command
+
+    docker build -t esdemo:1.1.0 .
+
+ in this directory to create the necessary Docker image
+
 ## Starting your cluster
 
 This is easy:
@@ -55,3 +63,9 @@ If you look at the nodes on the kopf display, you'll see which node corresponds 
 ## Questions, comments, etc.
 
 If you have any questions, please don't hesitate to contact me. This is a public repo so pull requests for clarifications and improvements are most welcome.
+
+
+### Acknowledgements
+
+The shakespeare data and index commands are taken from [Elasticsearch's Kibana walkthrough](http://www.elasticsearch.org/guide/en/kibana/current/using-kibana-for-the-first-time.html)
+The base Docker image for our image is [dockerfile/elasticsearch](https://github.com/dockerfile/elasticsearch/blob/master/Dockerfile)
